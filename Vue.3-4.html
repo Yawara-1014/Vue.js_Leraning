@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/vue@2.5.17"></script>
+  <title>Vue.3-4</title>
+</head>
+
+<body>
+  <div id="fruits-list">
+    <page-header>
+      <h1 slot="header">夏の果物</h1>
+    </page-header>
+    <ul>
+      <li>スイカ</li>
+      <li>マンゴー</li>
+    </ul>
+  </div>
+</body>
+
+<script>
+  var headerTemplate =`
+  <div style="color: gray;">
+    <slot name="header">※親から何も渡っていない場合</slot>
+  </div>
+  `
+  Vue.component('page-header', {
+    template: headerTemplate
+  })
+
+  new Vue({
+    el: "#fruits-list"
+  })
+</script>
+
+</html>

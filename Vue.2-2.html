@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/vue@2.5.17"></script>
+  <title>Vue.js_2-2</title>
+</head>
+
+<body>
+  <div id="app">
+    <p>
+      {{ message }}
+    </p>
+  </div>
+</body>
+
+<script>
+  console.assert(typeof Vue !== 'undefined');
+  new Vue({
+    el: '#app',
+    data: {
+      message: 'こんにちは！'
+    }
+  });
+</script>
+
+
+
+</html>
